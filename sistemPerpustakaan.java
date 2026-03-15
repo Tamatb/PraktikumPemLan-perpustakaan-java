@@ -104,10 +104,28 @@ public class sistemPerpustakaan {
         filsafat.tambahBuku(new BookItem("Buku Filsafat 4",504,penulis5,"Filsafat"));
         filsafat.tambahBuku(new BookItem("Buku Filsafat 5",505,penulis5,"Filsafat"));
 
+        CategoryShelf agama = new CategoryShelf("Agama");
+        
+        agama.tambahBuku(new BookItem("Buku Agama 1",601,penulis1,"Agama"));
+        agama.tambahBuku(new BookItem("Buku Agama 2",602,penulis1,"Agama"));
+        agama.tambahBuku(new BookItem("Buku Agama 3",603,penulis1,"Agama"));
+        agama.tambahBuku(new BookItem("Buku Agama 4",604,penulis1,"Agama"));
+        agama.tambahBuku(new BookItem("Buku Agama 5",605,penulis1,"Agama"));
+        
+        CategoryShelf politik = new CategoryShelf("Politik");
+        
+        politik.tambahBuku(new BookItem("Buku Politik 1",701,penulis2,"Politik"));
+        politik.tambahBuku(new BookItem("Buku Politik 2",702,penulis2,"Politik"));
+        politik.tambahBuku(new BookItem("Buku Politik 3",703,penulis2,"Politik"));
+        politik.tambahBuku(new BookItem("Buku Politik 4",704,penulis2,"Politik"));
+        politik.tambahBuku(new BookItem("Buku Politik 5",705,penulis2,"Politik"));
+        
         teknologi.tampilKategori();
         sejarah.tampilKategori();
         psikologi.tampilKategori();
         fiksi.tampilKategori();
         filsafat.tampilKategori();
+        agama.tampilKategori();
+        politik.tampilKategori();
     }
 }
