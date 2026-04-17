@@ -1,0 +1,91 @@
+public class Main {
+
+    // CLASS KALKULATOR
+    static class Kalkulator {
+
+        // static method
+        public static int tambah(int a, int b) {
+            return a + b;
+        }
+
+        public static int kurang(int a, int b) {
+            return a - b;
+        }
+
+        // non-static method
+        public int kali(int a, int b) {
+            return a * b;
+        }
+
+        public double bagi(int a, int b) {
+            return (double) a / b;
+        }
+
+        // overloading
+        public int sederhana(int a, int b) {
+            return a + b;
+        }
+
+        public int sederhana(int a, int b, int c) {
+            return a + b + c;
+        }
+    }
+
+    // CLASS JAKET
+    static class Jaket {
+        final int hargaA = 100000;
+        final int hargaB = 125000;
+        final int hargaC = 175000;
+
+        public int hitungA(int jumlah) {
+            if (jumlah > 100) {
+                return jumlah * 95000;
+            } else {
+                return jumlah * hargaA;
+            }
+        }
+
+        public int hitungB(int jumlah) {
+            if (jumlah > 100) {
+                return jumlah * 120000;
+            } else {
+                return jumlah * hargaB;
+            }
+        }
+
+        public int hitungC(int jumlah) {
+            if (jumlah > 100) {
+                return jumlah * 160000;
+            } else {
+                return jumlah * hargaC;
+            }
+        }
+    }
+
+    // MAIN METHOD
+    public static void main(String[] args) {
+
+        // ===== BAGIAN KALKULATOR =====
+        Kalkulator k = new Kalkulator();
+
+        System.out.println("=== KALKULATOR ===");
+        System.out.println("Tambah: " + Kalkulator.tambah(10, 5));
+        System.out.println("Kurang: " + Kalkulator.kurang(10, 5));
+        System.out.println("Kali: " + k.kali(10, 5));
+        System.out.println("Bagi: " + k.bagi(10, 5));
+        System.out.println("Overload (2 angka): " + k.sederhana(1, 2));
+        System.out.println("Overload (3 angka): " + k.sederhana(1, 2, 3));
+
+        // ===== BAGIAN JAKET =====
+        Jaket j = new Jaket();
+
+        int totalA = j.hitungA(120);
+        int totalB = j.hitungB(80);
+        int totalC = j.hitungC(150);
+
+        System.out.println("\n=== PERHITUNGAN JAKET ===");
+        System.out.println("Total Jaket A: " + totalA);
+        System.out.println("Total Jaket B: " + totalB);
+        System.out.println("Total Jaket C: " + totalC);
+    }
+}
